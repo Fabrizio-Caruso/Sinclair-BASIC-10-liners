@@ -5,6 +5,6 @@
 4 if rnd>q then let xx = px -4 + 2*int(rnd*5): let xx = xx - 32*int(xx/32): let xy = py -2 + 2*int(rnd*3):ink 7: print at xy,xx;"o"
 5 ink 2: print at py,px;"*": LET l = j-4*int(j/4):let s=0:let y=0:LET s=code inkey$:let e=s-2*int(s/2):IF j>k*100-2 THEN LET k=k+1:LET f=0
 6 let c=s-107+e:if sgn(c)=c then ink 7: print at py,px;"o": let y=1:let j=j+1:let q=q-0.0005:let px = px+(1-e)*c: let py = py+e*c: let px = px - 32*int(px/32)
-7 let gx = (y=1)*(l=3)*int(rnd*32): let gy =(y=1)*(l=3)*int(rnd*21): ink 6: print at gy,gx;"$": IF s=32 THEN IF f<9 THEN print at py-1,px;" ": print at py+1,px;" ": print at py,px-1;" ": print at py,px+1;" ":let f = f + 1
+7 let gx = (y=1)*(l=3)*int(rnd*32): let gy =(y=1)*(l=3)*int(rnd*21): ink 6: print at gy,gx;"$": IF s=32 THEN IF f<9 THEN print at py-1,px;" ": print at py+1,px;" ": let f = f + 1: print at py,(px<>0)*(px-1);" ": print at py,(px<>31)*px+1;" ":
 8 if py < 20 AND py > 2 then if screen$(py,px)<>"o" then GOTO 3
 9 print at 1,0;"THE END":FOR i = 1 TO t:NEXT i:let s = 0: let e = 0: let l = 0: GOTO 1
